@@ -30,30 +30,26 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
 
-                // LOGO
+                const SizedBox(height: 20),
+
                 ShaderMask(
                   shaderCallback: (bounds) => const LinearGradient(
-                    colors: [
-                      Colors.blue,
-                      Colors.purple,
-                      Colors.pink,
-                    ],
+                    colors: [Colors.blue, Colors.pink],
                   ).createShader(bounds),
                   child: const Text(
                     "IND AI",
                     style: TextStyle(
-                      fontSize: 50,
+                      fontSize: 42,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 30),
+                const SizedBox(height: 40),
 
-                // IMAGE BOX
                 Container(
-                  height: 350,
+                  height: 320,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
@@ -65,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.purple.withOpacity(0.8),
+                        color: Colors.purple.withOpacity(0.7),
                         blurRadius: 30,
                         spreadRadius: 5,
                       ),
@@ -74,20 +70,18 @@ class HomeScreen extends StatelessWidget {
                   child: const Center(
                     child: Icon(
                       Icons.image,
-                      size: 120,
+                      size: 90,
                       color: Colors.white70,
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 35),
+                const SizedBox(height: 45),
 
-                // UPLOAD BUTTON
                 Container(
                   width: double.infinity,
-                  height: 75,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(30),
                     gradient: const LinearGradient(
                       colors: [
                         Colors.blue,
@@ -96,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.cyan.withOpacity(0.8),
+                        color: Colors.cyan,
                         blurRadius: 25,
                         spreadRadius: 2,
                       ),
@@ -106,15 +100,16 @@ class HomeScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
+                      padding: const EdgeInsets.symmetric(vertical: 22),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     onPressed: () {},
                     child: const Text(
                       "Upload Photo",
                       style: TextStyle(
-                        fontSize: 28,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -122,14 +117,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 30),
+                const SizedBox(height: 35),
 
-                // REMOVE BUTTON
                 Container(
                   width: double.infinity,
-                  height: 75,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(30),
                     gradient: const LinearGradient(
                       colors: [
                         Colors.purple,
@@ -138,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.pink.withOpacity(0.8),
+                        color: Colors.pink,
                         blurRadius: 25,
                         spreadRadius: 2,
                       ),
@@ -148,8 +141,9 @@ class HomeScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
+                      padding: const EdgeInsets.symmetric(vertical: 22),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     onPressed: () {},
@@ -158,12 +152,11 @@ class HomeScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,    IND AI glowing UI
+                        color: Colors.white,
                       ),
                     ),
                   ),
                 ),
-
               ],
             ),
           ),
